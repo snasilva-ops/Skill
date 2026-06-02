@@ -1,0 +1,143 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  min-height: 100vh; /* 🔥 permite rolagem */
+  background: #f4f7f6;
+}
+
+/* ===== MENU ===== */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #2e7d32, #1b5e20);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* MENU COMO LINK (corrige azul) */
+.menu-btn {
+  display: block;
+  padding: 12px;
+  margin: 4px 0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.menu-btn:visited {
+  color: white;
+}
+
+.menu-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* ===== CONTEÚDO ===== */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto; /* 🔥 permite scroll */
+}
+
+/* (se ainda usar páginas internas com JS) */
+.page {
+  display: none;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.active {
+  display: block;
+}
+
+/* ===== CARDS ===== */
+.card {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+/* ===== BOTÃO ===== */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ff6f00, #ffb74d);
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* ===== PÁGINA ATUALIZAÇÃO ===== */
+.container-duplo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ESQUERDA */
+.lado-esquerdo {
+  flex: 2;
+  min-width: 0;
+}
+
+/* DIREITA */
+.lado-direito {
+  flex: 1;
+  min-width: 0;
+}
+
+/* LINHA DIVISÓRIA */
+.linha {
+  width: 2px;
+  background: #2e7d32;
+  opacity: 0.3;
+  align-self: stretch;
+}
+
+
+/* IMAGENS */
+.imagem-explicativa {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .container-duplo {
+    flex-direction: column;
+  }
+
+  .linha {
+    display: none;
+  }
+}
+h1, h3, h4, p {
+  word-break: break-word;
+}
